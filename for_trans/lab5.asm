@@ -1,0 +1,22 @@
+.MODEL  SMALL
+.386
+.STACK  200
+
+.DATA   
+XUEHAO  DD  4 DUP(0)
+.CODE
+BEGIN:  MOV AX,@DATA
+        MOV DS,AX
+        MOV EDI,OFFSET  XUEHAO;间接寻址
+        MOV XUEHAO,'3361';立即寻址
+        MOV AH,4CH
+        INT 21H
+
+
+
+
+
+
+
+
+END BEGIN
